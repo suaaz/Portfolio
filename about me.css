@@ -110,6 +110,7 @@ h1 {
     }
 
     .content {
+        position: relative;
         display: flex;
         transition: none;
         transform: none;
@@ -134,7 +135,7 @@ h1 {
         border-left: 1px solid black;
         border-right: 1px solid black;
         padding: 0px 20px;
-        margin-top:120px;
+        margin-top:34px;
         width: fit-content;
         align-self: center;
     }
@@ -167,6 +168,7 @@ h1 {
     .text_picture {
         display: flex;
         max-width: 954px;
+        align-items: center;
     }
 
     .picture{
