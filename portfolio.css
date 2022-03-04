@@ -1,0 +1,138 @@
+html {
+    font-family: sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.picture {
+    background-image: url('space.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+    height: 100vh;
+    margin: 0px;
+}
+
+#hambuger:checked ~ .content {
+    display:block;
+    transform: translateY(0);
+    width: 100%;
+}
+
+#hambuger:checked ~ .nav {
+    background-color: black;
+}
+
+.content {
+    /* visibility: hidden; */
+    display: block;
+    background-color: black;
+    transition: transform .5s ease-in-out;
+    transform: translateY(-100%);
+}
+
+input {
+    display: none;
+}
+
+.nav {
+    z-index: 10;
+    position: absolute;
+}
+
+.content ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    width: 90vw;
+}
+
+li {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19px;
+}
+
+.content a {
+    text-decoration: none;
+    color: #9d9d9d;
+}
+
+.nav i {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    width: 95vw;
+    padding-right: 18px;
+    /* background: black; */
+    position: absolute;
+    z-index: 10;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+    margin-left: 16px;
+}
+
+.text p{
+    color: white;
+    font-size:90px;
+    font-weight: bolder;  
+    margin: 0px;
+    height: auto;
+    text-shadow: 1px 3px #000000;
+}
+
+.media_queries {
+    display: none;
+}
+
+a:hover {
+    color: white;
+    transition: all .2s linear;
+}
+
+
+@media screen and (min-width:768px){
+    label {
+        display: none;
+    }
+
+    .media_queries {
+        display: flex;
+        text-decoration: none;
+        margin-top: 41px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #9d9d9d;
+    }
+
+    li {
+        padding: 2px 25px;
+        border-right: 1px solid white;
+    }
+
+    pre {
+        margin: 0px;
+    }
+
+    .none a{
+        border: none;
+    }
+
+    .text p{
+        font-size: 110px;
+    }
+
+    li:last-child {
+        border: none;
+    }
+}
